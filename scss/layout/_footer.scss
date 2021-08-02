@@ -1,0 +1,26 @@
+.footer {
+  background-color: cl(strong-blue);
+
+  .inner {
+  }
+
+  .footer-logo {
+    width: 120px;
+    height: 70px;
+    margin: auto;
+
+    @include overTab {
+      padding-top: 20px;
+    }
+    .logo {
+      display: block;
+    }
+  }
+  .copy-right {
+    text-align: center;
+    font-size: 16px;
+
+    @include overTab {
+    }
+  }
+}

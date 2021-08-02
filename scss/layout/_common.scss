@@ -1,0 +1,27 @@
+.cmn-section {
+}
+.cmn-title {
+  .main {
+    font-size: 20px;
+    display: block;
+    text-align: center;
+    font-weight: 600;
+
+    @include overTab {
+      font-size: 2vw;
+    }
+  }
+  .sub {
+    font-size: 1.6vw;
+    display: block;
+    text-align: center;
+    text-transform: uppercase;
+    color: cl(emerald);
+    font-weight: 500;
+    padding-bottom: 20px;
+
+    @include overTab {
+      font-size: 1.6vw;
+    }
+  }
+}

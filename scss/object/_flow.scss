@@ -1,0 +1,105 @@
+.flow {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: cl(cerulean);
+  @include overTab {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+  .inner {
+  }
+  .flow-cont {
+    text-align: center;
+  }
+  .flow-title {
+  }
+  .flow-list-upper {
+    @include overTab {
+      display: flex;
+      padding-bottom: 40px;
+    }
+  }
+  .flow-list-lower {
+    @include overTab {
+      display: flex;
+    }
+  }
+  .flow-item {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-flow: column-reverse;
+
+    @include overTab {
+    }
+
+    .text {
+      margin: 0 auto;
+    }
+    .title {
+      font-size: 20px;
+      color: cl(emerald);
+      font-weight: 600;
+      @include overTab {
+        font-size: 1.6vw;
+      }
+    }
+    .sub {
+      font-size: 16px;
+      margin-bottom: 20px;
+      @include overTab {
+        font-size: 1.6vw;
+      }
+    }
+    .desc {
+      font-size: 13px;
+      text-align: left;
+      margin-bottom: 20px;
+      @include overTab {
+        font-size: 1.2vw;
+      }
+    }
+    .image {
+      margin: 0 auto;
+      background-color: cl(white);
+      padding: 20px;
+      border: 6px solid rgba(59, 166, 201, 0.3);
+      width: 40px;
+      height: 40px;
+      @include overTab {
+        width: 50px;
+        height: 50px;
+        padding: 20px;
+        border: 6px solid rgba(59, 166, 201, 0.3);
+      }
+      @include overLap {
+        padding: 30px;
+      }
+    }
+    + .flow-item {
+    }
+  }
+  .arrow {
+    margin: auto;
+    width: 0;
+    height: 0;
+    border-top: solid 15px #697b91;
+    border-right: solid 15px transparent;
+    border-bottom: solid 15px transparent;
+    border-left: solid 15px transparent;
+    @include overTab {
+      border-left: solid 30px #697b91;
+      border-top: solid 30px transparent;
+      border-right: solid 30px transparent;
+      border-bottom: solid 30px transparent;
+    }
+  }
+  .-step {
+    @include overTab {
+      display: none;
+      visibility: hidden;
+      opacity: 0;
+    }
+  }
+}

@@ -1,0 +1,124 @@
+.service {
+  padding-top: 20px;
+
+  @include overTab {
+    padding-top: 40px;
+  }
+
+  .inner {
+  }
+  .service-title {
+  }
+  .service-cont {
+    height: auto;
+    background: linear-gradient(
+      110deg,
+      #ffffff 0%,
+      #ffffff 56%,
+      #b4c7db 56%,
+      #b4c7db 100%
+    );
+    @include overTab {
+      background: linear-gradient(
+        110deg,
+        #f7fbff 0%,
+        #f7fbff 52%,
+        #e3ecf5 52%,
+        #b4c7db 100%
+      );
+    }
+    .service-cont-title {
+      text-align: center;
+      padding-top: 20px;
+      padding-bottom: 20px;
+      font-weight: bold;
+      @include overTab {
+        padding-top: 40px;
+        padding-bottom: 40px;
+      }
+      p {
+        font-size: 18px;
+        @include overTab {
+          font-size: 1.6vw;
+        }
+      }
+    }
+    .detail {
+      font-size: 14px;
+      padding: 10px;
+      @include overTab {
+        font-size: 1.2vw;
+      }
+      p {
+        text-align: center;
+        @include overTab {
+        }
+      }
+    }
+    .devide-wrap {
+      display: flex;
+      justify-content: space-evenly;
+      padding-bottom: 40px;
+      @include overTab {
+        padding-bottom: 20px;
+      }
+
+      .website {
+        .title {
+          font-size: 18px;
+
+          font-weight: bold;
+          text-align: center;
+          padding-top: 20px;
+          padding-bottom: 20px;
+          @include overTab {
+            font-size: 1.5vw;
+          }
+        }
+        .image {
+          max-width: 100px;
+          @include overTab {
+            max-width: 200px;
+          }
+
+          img {
+            border: 1px solid cl(strong-blue);
+            border-radius: 50%;
+          }
+        }
+      }
+      .and {
+        display: flex;
+        align-items: center;
+        font-size: 10vw;
+        color: cl(emerald);
+        @include overLap {
+          font-size: 130px;
+        }
+      }
+      .marcketing {
+        .title {
+          font-size: 18px;
+
+          font-weight: bold;
+          text-align: center;
+          padding-bottom: 20px;
+          padding-top: 20px;
+          @include overTab {
+            font-size: 1.5vw;
+          }
+        }
+        .image {
+          max-width: 100px;
+          @include overTab {
+            max-width: 200px;
+          }
+          img {
+            border-radius: 50%;
+            border: 1px solid cl(strong-blue);
+          }
+        }
+      }
+    }
+  }
+}

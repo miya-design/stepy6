@@ -1,0 +1,176 @@
+.top {
+  width: 100%;
+  margin-top: 50px;
+  height: 70vw;
+  position: relative;
+  /*
+  background: rgb(54, 80, 82);
+  background: linear-gradient(
+    90deg,
+    rgba(54, 80, 82, 1) 0%,
+    rgba(99, 153, 155, 1) 100%
+  );
+  */
+  background-color: rgba(7, 168, 226, 0.712);
+
+  @include overTab {
+    height: 55vw;
+    margin-top: 100px;
+    max-height: 880px;
+    min-height: 550px;
+  }
+}
+
+.cover {
+  width: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  position: absolute;
+  height: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  content: " ";
+}
+
+.top-image {
+  position: absolute;
+  top: 25%;
+  left: 18%;
+  transform: translateX(-42%) translateY(-30%);
+  width: 85vw;
+
+  @include overTab {
+    max-width: 1200px;
+    min-width: 800px;
+  }
+}
+
+.middle-box {
+  height: 50%;
+  width: 100%;
+  background-size: cover;
+  top: 30%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-30%);
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  color: cl(white);
+
+  @include overTab {
+    top: 33%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-33%);
+  }
+}
+
+.middlebox-cover {
+  width: 100%;
+
+  background: rgba(255, 255, 255, 0.35);
+  position: absolute;
+  height: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  content: " ";
+
+  @include overTab {
+  }
+}
+
+.title-cont {
+  position: absolute;
+  top: 33%;
+  left: 100%;
+  width: 50%;
+  transform: translateX(-100%) translateY(-33%);
+  @include overTab {
+    left: 110%;
+    transform: translateX(-110%) translateY(-33%);
+  }
+}
+
+.main-title {
+  color: cl(white);
+  z-index: 3;
+  font-size: 14px;
+  font-weight: 600;
+
+  @include overTab {
+    font-size: 2vw;
+    font-size: 2.5vw;
+  }
+}
+.sub-title {
+  font-size: 10px;
+  margin-top: 20px;
+  font-weight: 600;
+  width: auto;
+
+  @include overTab {
+    font-size: 2vw;
+  }
+}
+.topbtn-box {
+  height: 50px;
+  position: absolute;
+  top: 100%;
+  transform: translateY(-100%);
+  background-color: cl(white);
+  width: 100%;
+  border-bottom: hidden;
+
+  @include overTab {
+    height: 100px;
+  }
+  @include overLap {
+    padding: 20px 0px;
+  }
+}
+.top-btn {
+  font-size: 2vw;
+  margin-left: 10px;
+  position: absolute;
+  left: 90%;
+  top: 50%;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.3);
+  background-color: cl(button-yellow);
+  border-radius: 8px;
+  transform: translateX(-90%) translateY(-50%);
+
+  .arrow {
+    position: absolute;
+    right: 20px;
+    &.-active {
+      position: absolute;
+      right: 10px;
+      transition: 0.3s all;
+    }
+    @include overTab {
+      right: 60px;
+      &.-active {
+        position: absolute;
+        right: 40px;
+        transition: 0.3s all;
+      }
+    }
+  }
+
+  a {
+    color: cl(white);
+    background-color: cl(button-yellow);
+    width: 30vw;
+    padding: 1vw;
+    display: flex;
+    border-radius: 8px;
+    font-size: 1.5vw;
+    align-items: center;
+    justify-content: center;
+    max-width: 400px;
+    @include overLap {
+    }
+  }
+}

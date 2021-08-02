@@ -1,0 +1,138 @@
+.works {
+  padding-bottom: 20px;
+  padding-top: 20px;
+
+  @include overTab {
+    padding-bottom: 40px;
+    padding-top: 40px;
+  }
+
+  .inner {
+  }
+  .works-title {
+  }
+  .works-cont {
+  }
+  .works-list {
+    @include overTab {
+      display: flex;
+    }
+
+    .works-item {
+      margin-right: 20px;
+      margin-left: 20px;
+      vertical-align: bottom;
+      flex-flow: column;
+      border: 6px solid cl(cerulean);
+
+      @include overTab {
+        display: flex;
+        justify-content: center;
+        flex: 1;
+        border: none;
+      }
+      + .works-item {
+        margin-top: 20px;
+        @include overTab {
+          margin-left: 20px;
+          margin-top: 0;
+        }
+      }
+    }
+    .text {
+      font-size: 13px;
+      text-align: center;
+      margin-top: 10px;
+
+      @include overTab {
+        font-size: 20px;
+        text-align: center;
+        margin-top: 0;
+      }
+    }
+    .works-desc {
+      font-size: 13px;
+      text-align: center;
+
+      @include overTab {
+        font-size: 20px;
+      }
+    }
+    .portfolio-link {
+      .portfolio-img {
+        @include overTab {
+          display: block;
+        }
+      }
+    }
+  }
+  .portfolio {
+    @include overTab {
+      position: relative;
+      height: auto;
+      overflow: hidden;
+    }
+  }
+  .portfolio .caption {
+    @include overTab {
+      width: 100%;
+      visibility: hidden; /* 文字を表示しない */
+      font-size: 150%;
+      position: absolute;
+      top: 50%;
+      left: 0;
+      text-align: center;
+      -webkit-transition: all 0.4s step-end;
+      transition: all 0.4s step-end;
+      transform: translateX(0%) translateY(-50%);
+    }
+  }
+  .portfolio:hover .caption {
+    @include overTab {
+      visibility: visible; /* 文字を表示する */
+    }
+  }
+  .portfolio .caption p {
+    @include overTab {
+      color: #fff;
+      opacity: 0; /* ホバーが解除された時すぐ消えるように、文字を表示しない */
+    }
+  }
+  .portfolio:hover .caption p {
+    @include overTab {
+      opacity: 1; /* 文字を表示する */
+    }
+  }
+  .portfolio .mask1,
+  .portfolio .mask2 {
+    @include overTab {
+      width: 50%; /* 幅は半部のサイズ */
+      height: 100%;
+      position: absolute;
+      top: 0;
+      background-color: rgba(0, 0, 0, 0.4);
+      -webkit-transition: all 0.4s ease;
+      transition: all 0.4s ease;
+    }
+  }
+  .portfolio .mask1 {
+    @include overTab {
+      left: -50%; /* 枠の左に置いて表示させない */
+    }
+  }
+  .portfolio:hover .mask1 {
+    @include overTab {
+      left: 0px; /* 左にずらして表示する */
+    }
+  }
+  .portfolio .mask2 {
+    @include overTab {
+      right: -50%; /* 枠の右に置いて表示させない */
+    }
+  }
+  .portfolio:hover .mask2 {
+    @include overTab {
+      right: 0px; /* 右にずらして表示する */
+    }
+  }
+}

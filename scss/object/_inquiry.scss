@@ -1,0 +1,66 @@
+.inquiry {
+  padding-bottom: 20px;
+  background-color: cl(ice-blue);
+  @include overTab {
+    padding-bottom: 40px;
+  }
+  .inner {
+  }
+
+  .inquiry-title {
+    padding-top: 20px;
+    @include overTab {
+    }
+  }
+  .inquiry-cont {
+    padding-top: 20px;
+    width: 80%;
+    margin: 0 auto;
+    @include overLap {
+      width: 70%;
+    }
+
+    .desc {
+      padding: 20px;
+      font-size: 18px;
+      text-align: center;
+
+      background-color: cl(white);
+      border-radius: 10px;
+      @include overTab {
+        font-size: 1.6vw;
+      }
+      @include overLap {
+        font-size: 1.3vw;
+      }
+    }
+  }
+  .inq-btn {
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.3);
+    background-color: cl(button-yellow);
+    border-radius: 8px;
+    width: 155px;
+    height: 37px;
+    margin: 0 auto;
+    margin-top: 20px;
+
+    @include overTab {
+    }
+    a {
+      margin-left: auto;
+      margin-right: auto;
+
+      color: cl(white);
+      background-color: cl(button-yellow);
+      width: 155px;
+      height: 37px;
+      display: flex;
+      border-radius: 8px;
+      font-size: 14px;
+      align-items: center;
+      justify-content: center;
+      @include overTab {
+      }
+    }
+  }
+}

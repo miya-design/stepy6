@@ -1,0 +1,131 @@
+.price {
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+  background: cl(ice-blue);
+  @include overTab {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+  .inner {
+  }
+  .price-title {
+  }
+  .price-cover {
+    background-color: cl(white);
+    border-radius: 10px;
+    width: 95%;
+    margin: 0 auto;
+    @include overTab {
+      width: 80%;
+    }
+
+    p {
+      text-align: left;
+      font-size: 10px;
+      padding-bottom: 10px;
+      padding-left: 6vw;
+      @include overTab {
+        font-size: 1.2vw;
+
+        padding-bottom: 20px;
+        br {
+          display: none;
+        }
+      }
+    }
+  }
+  .explain {
+    text-align: center;
+    font-size: 10px;
+    padding-bottom: 10px;
+    padding-left: 6vw;
+    @include overTab {
+      font-size: 1.2vw;
+    }
+  }
+
+  .price-wrap {
+    @include overTab {
+    }
+  }
+  .row {
+    display: flex;
+    justify-content: space-between;
+  }
+  .price-list {
+    padding-left: 0;
+
+    .item {
+      text-align: left;
+      font-size: 13px;
+      font-weight: bold;
+      border-bottom: 1px solid #e5e5e5;
+
+      @include overTab {
+        font-size: 1.6vw;
+        font-weight: normal;
+      }
+      @include overLap {
+        font-size: 30px;
+      }
+
+      span {
+        color: cl(emerald);
+      }
+      a {
+        display: block;
+
+        @include overTab {
+          margin-right: 20px;
+          margin-left: 20px;
+        }
+      }
+      .title {
+        padding: 5px;
+      }
+      .detail {
+        margin-left: 20px;
+        margin-right: 20px;
+        font-size: 10px;
+        display: none;
+        font-weight: normal;
+
+        @include overTab {
+          font-size: 1.2vw;
+        }
+        br {
+          display: none;
+          @include overTab {
+            display: initial;
+          }
+        }
+      }
+      .val {
+        display: flex;
+        align-items: center;
+      }
+    }
+  }
+  .price-value {
+    padding-left: 0;
+    display: inline-block;
+
+    .item {
+      text-align: left;
+      font-size: 13px;
+      font-weight: bold;
+
+      @include overTab {
+        font-size: 1.6vw;
+        font-weight: normal;
+      }
+      @include overLap {
+        font-size: 30px;
+      }
+      span {
+        color: cl(emerald);
+      }
+    }
+  }
+}

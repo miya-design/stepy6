@@ -1,0 +1,178 @@
+.header {
+  .header-fixed {
+    background-color: cl(white);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 50px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 3;
+    @include overTab {
+      height: 100px;
+    }
+  }
+  .header-logo {
+    width: 50px;
+    margin-left: 30px;
+    align-items: center;
+    @include overTab {
+      width: 150px;
+    }
+    .logo {
+      display: block;
+      width: 80px;
+      @include overTab {
+        width: 9vw;
+      }
+    }
+  }
+  .nav-btn {
+    width: 52px;
+    height: 25px;
+    appearance: none;
+    background-color: transparent;
+    border: none;
+    font: inherit;
+    outline: none;
+    position: relative;
+    margin-right: 30px;
+    @include overTab {
+      display: none;
+    }
+    span {
+      position: absolute;
+      width: 70%;
+      height: 3px;
+      background-color: cl(black);
+
+      display: block;
+      transition: transform 0.3s ease;
+      &:first-child {
+        top: 0;
+        bottom: 0;
+        margin: auto;
+      }
+      &:nth-child(2) {
+        top: 0;
+      }
+      &:last-child {
+        bottom: 0;
+      }
+    }
+    &.-active {
+      span {
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        transition: transform 0.3s ease;
+        &:first-child {
+          transform: rotate(45deg);
+        }
+        &:nth-child(2) {
+          transform: rotate(45deg);
+        }
+        &:last-child {
+          transform: rotate(-45deg);
+        }
+      }
+    }
+  }
+  .nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    width: 100%;
+
+    background-color: cl(cerulean);
+    opacity: 0;
+    visibility: hidden;
+    @include overTab {
+      width: initial;
+      background-color: transparent;
+      padding-top: 0;
+      z-index: 3;
+      left: inherit;
+      right: 0;
+      top: 32px;
+      opacity: 1;
+      visibility: visible;
+    }
+    &.-active {
+      opacity: 1;
+      visibility: visible;
+      transition: opacity 0.3s ease;
+    }
+  }
+
+  .nav-list {
+    font-size: 20px;
+    text-align: center;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    align-items: center;
+
+    @include overTab {
+      display: flex;
+      margin-right: 20px;
+      padding-bottom: 0;
+      padding-top: 0;
+    }
+    .nav-item {
+      @include overTab {
+      }
+      + .nav-item {
+        margin-top: 20px;
+
+        @include overTab {
+          margin-left: 20px;
+          margin-top: 0;
+        }
+      }
+    }
+    a {
+      color: cl(black);
+      font-size: 20px;
+
+      @include overTab {
+        font-size: 17px;
+      }
+    }
+    .nav-link {
+      align-items: center;
+      justify-content: center;
+      display: block;
+      margin-left: 80px;
+      margin-right: 80px;
+      box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.3);
+      background-color: cl(button-yellow);
+      border-radius: 8px;
+
+      @include overTab {
+        margin-left: 10px;
+        margin-right: 0;
+      }
+      a {
+        text-align: center;
+        color: cl(white);
+        background-color: cl(button-yellow);
+        padding-right: 20px;
+        padding-left: 20px;
+
+        height: 37px;
+        display: flex;
+        border-radius: 8px;
+        font-size: 14px;
+        align-items: center;
+        justify-content: center;
+        margin-top: 20px;
+        @include overTab {
+          margin-top: 0;
+        }
+      }
+    }
+  }
+}
